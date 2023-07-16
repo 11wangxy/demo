@@ -1,0 +1,17 @@
+server:
+  port: 90
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=TraceElement20230705;trustServerCertificate=true;
+    username: sa
+    password: 20030111
+
+#mybatis日志文件配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.demo.pojo.Areas
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
